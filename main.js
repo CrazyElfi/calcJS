@@ -1,9 +1,9 @@
-function getNumberFromInput() {
-
-    var data = '123';
-
-    return data
-}
+// function getNumberFromInput() {
+//
+//     var data = '123';
+//
+//     return data
+// }
 //
 // var numbers = getNumberFromInput();
 // console.log(numbers)
@@ -43,15 +43,62 @@ function getNumberFromInput() {
 // console.log(document.getElementsByClassName("btn"));
 //
 
+// var numbInside = 0;
+// var currentNumber = 0;
+var savedNumber = 0;
 
-
-function clickNumber() {
-    var buttons = document.getElementsByClassName('btn');
-    for (var i = 0; i < buttons.length; i++) {
+function setEventsToNumbers() {
+    var buttons = document.getElementsByClassName('number');
+    for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
-            console.log(this.value);
 
+            console.log("clickedNumber:",this.value);
+            // currentNumber = this.value;
+
+            let inputNumber = Number(document.getElementById('area').value);
+            let result = null;
+
+            if(inputNumber === 0){
+                result = this.value;
+            } else {
+                result = inputNumber + this.value;
+            }
+
+            document.getElementById('area').setAttribute('value', result);
         });
     }
 }
-clickNumber();
+setEventsToNumbers();
+
+
+
+function addition() {
+    let inputNumber = Number(document.getElementById('area').value);
+    console.log("inputNumber = " + inputNumber);
+
+    let string = inputNumber + "+";
+
+    // console.log('result = ' + result);
+    // document.getElementById('area').setAttribute('value', result);
+
+
+}
+
+// addition();
+
+// function subtraction() {
+//     let num2 = Number(document.getElementById('area').value);
+//     console.log("num2 = " + num2);
+//
+//     let resultSubtr = num2 + Number(NumbInside);
+//     console.log('resultSubtr = ' + resultSubtr);
+//     document.getElementById('area').setAttribute('value', resultSubtr);
+// }
+
+// subtraction();
+
+function clean() {
+    document.getElementById('area').setAttribute('value','0');
+}
+
+// clean();
