@@ -13,27 +13,42 @@
             <div class="calc__inner">
 
                 <div class="calc__content">
-                    <input type="text" class="calc__area" id="area" value="0">
-                    <div class="calc_numb">
-                        <button class="btn number" value="1">1</button>
-                        <button class="btn number" value="2">2</button>
-                        <button class="btn number" value="3">3</button>
-                        <button class="btn number" value="4">4</button>
-                        <button class="btn number" value="5">5</button>
-                        <button class="btn number" value="6">6</button>
-                        <button class="btn number" value="7">7</button>
-                        <button class="btn number" value="8">8</button>
-                        <button class="btn number" value="9">9</button>
-                        <button class="btn number" value="0">0</button>
-                        <button class="btn clean" onclick="clean()" value="0">C</button>
+                    <input type="text" class="calc__area" id="area">
+                    <div class="calc__operation">
                     </div>
 
-                    <div class="calc__operation">
-                        <button class="btn" onclick="addition()" value="+">+</button>
-                        <button class="btn" onclick="subtraction()" value="-">-</button>
-                        <button class="btn" onclick="" value="*">*</button>
-                        <button class="btn" onclick="" value="=">=</button>
+                    <div class="calc_numb">
+
+                        <button class="btn clean" onclick="clean()" value="0">C</button>
+                        <button class="btn arrEl" value="(">(</button>
+                        <button class="btn arrEl" value=")">)</button>
+
+                        <button class="btn arrEl" value="7">7</button>
+                        <button class="btn arrEl" value="8">8</button>
+                        <button class="btn arrEl" value="9">9</button>
+
+                        <button class="btn arrEl" value="+">+</button>
+
+                        <button class="btn arrEl" value="4">4</button>
+                        <button class="btn arrEl" value="5">5</button>
+                        <button class="btn arrEl" value="6">6</button>
+
+                        <button class="btn arrEl" value="-">-</button>
+
+
+                        <button class="btn arrEl" value="1">1</button>
+                        <button class="btn arrEl" value="2">2</button>
+                        <button class="btn arrEl" value="3">3</button>
+
+                        <button class="btn arrEl" value="/">/</button>
+
+                        <button class="btn arrEl" value=".">.</button>
+                        <button class="btn arrEl" value="0">0</button>
+                        <button class="btn" onclick="equality()" value="=">=</button>
+                        <button class="btn arrEl" value="*">*</button>
+
                     </div>
+
                 </div>
             </div>
         </div>
